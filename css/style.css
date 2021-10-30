@@ -68,8 +68,6 @@ section {
     
 }
 
-
-
 /*Header_wrapper End*/
 
 /*Room Start*/
@@ -79,6 +77,7 @@ section {
     font-size: 40px;
     text-transform: uppercase;
     text-align: center;
+    padding-bottom: 40px;
 }
 
 .room {
@@ -94,7 +93,7 @@ section {
     text-transform: uppercase;
     position: relative;
     left: 160px;
-    top: 25px;
+    top: 100px;
 }
 
 .room__item {
@@ -119,8 +118,6 @@ section {
     width: 580px;
     height: 349px;
 }
-
-
 
 .room__item-2 {
     content: "";
@@ -152,6 +149,10 @@ section {
 
 /*About Start*/
 
+.about {
+    padding-bottom: 100px;
+}
+
 
 .about__title {
     font-family: Arial;
@@ -161,7 +162,7 @@ section {
     line-height: 50px;
     text-align: center;
     text-transform: uppercase;
-    padding-top: 60px;
+    padding-bottom: 40px;
 }
 
 .about__block {
@@ -229,6 +230,11 @@ section {
     line-height: 28px;
 }
 
+.otzov__title {
+    text-align: center;
+    padding-bottom: 40px;
+}
+
 
 .otzov__img-1 {
     background: url(../img/Maks_otzov.png) no-repeat;
@@ -254,17 +260,7 @@ section {
     padding-left: 60px;
 }
 
-
-
-
-
-
-
-
-
-
 /*OtzovEND*/
-
 
 
 /*FAQ Start*/
@@ -275,6 +271,7 @@ section {
     text-transform: uppercase;
     text-align: center;
     font-size: 40px;
+    padding-bottom: 40px;
 }
 
 .faq__list {
