@@ -1,2 +1,2 @@
-@import url(style.css);
-@import url(faq.css);
+@import 'normilize.css';
+@import 'style.css';

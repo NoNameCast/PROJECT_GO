@@ -8,10 +8,13 @@ body {
 
 /*Header_wrapper Start*/
 
+h1, h2, h3, p {
+    margin: 0;
+}
+
 
 .container {
-    max-width: 100%;
-    width: 1180px;
+    max-width: 1180px;
     padding: 0 30px;
     margin: 0 auto;
 }
@@ -20,60 +23,52 @@ section {
     padding: 50px 0;
 }
 
-.main {
-    width: 100%;
-    height: 942px;
-}
-
-.main__title {
+.main__container {
     position: relative;
-    font-family: "Arial black", sans-serif;
-    font-weight: 900;
-    letter-spacing: -0.1em;
-    font-size: 200px;
-    text-align: center;
-    margin: 0;
+    height: 820px;
+    overflow: hidden;
 }
 
-.main__title::before {
+.main__container:before {
+    content: "";
+    position: absolute;
+    top: 200px;
+    left: 0;
+    background-image: url(../img/game-over-banner.svg);
+    background-position: top;
+    background-repeat: repeat-y;
+    height: 100%;
+    width: 100%;
+    z-index: -3;
+}
+
+.main__container::after {
     content: "";
     background: url(../img/banner.png);
     width: 675px;
     height: 762px;
     position: absolute;
-    right: -10px;
-    top: 120px;
-    z-index: 5;
+    right: 0;
+    top: 100px;
+    z-index: -2;
+}
+
+.main__title {
+    font-family: "Arial black", sans-serif;
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.1em;
+    font-size: 200px;
 }
 
 .main__subtitle {
-    font-family: Arial sans-serif;
     font-weight: 400;
     padding-left: 211px;
     font-size: 28px;
-    margin: 0;
-}
-
-.main__subtitle::before {
-    content: "";
-    background: url(../img/GAME\ OVER\ \(Stroke\).svg);
-    background-repeat: repeat-y;
-    width: 1180px;
-    height: 746px;
-    position: absolute;
-    top: 240px;
-    left: 380px;
     
 }
 
-.main__patch {
-    background-color: #1B1A1B;
-    width: 1250px;
-    height: 100px;
-    position: absolute;
-    top: 900px;
-    z-index: 1000;
-}
+
 
 /*Header_wrapper End*/
 
@@ -88,8 +83,6 @@ section {
 
 .room {
     display: flow-root;
-    width: 1180px;
-    height: 814px;
 }
 
 .room__text {
@@ -236,10 +229,6 @@ section {
     line-height: 28px;
 }
 
-.otzov {
-    width: 980px;
-    height: 1153px;
-}
 
 .otzov__img-1 {
     background: url(../img/Maks_otzov.png) no-repeat;
