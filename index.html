@@ -10,10 +10,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="manifest" href="img/favicon/site.webmanifest">
     <link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#5bbad5">
-    
     <link rel="stylesheet" href="css/normilize.css">
     <link rel="stylesheet" href="css/index.css">
-    
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#b60080">
     <title>Methed - структура документа</title>
@@ -28,7 +26,7 @@
             <div class="container">
                 <div class="main__container">
                     <h1 class="main__title">GAME OVER</h1>
-                    <h2 class="main__subtitle">Новый формат игр и отдыха</h2>
+                    <p class="main__subtitle">Новый формат игр и отдыха</p>
                 </div>
             </div>
 
@@ -40,20 +38,20 @@
                     Наши залы
                 </h2>
 
-                <div class="room__list">
-                    <div class="room__item room__item-1">
+                <ul class="room__list">
+                    <li class="room__item room__item-1">
                         <p class="room__text">80's VIBES</p>
-                    </div>
-                    <div class="room__item room__item-2">
+                    </li>
+                    <li class="room__item room__item-2">
                         <p class="room__text">STAR WARS</p>
-                    </div>
-                    <div class="room__item room__item-3">
+                    </li>
+                    <li class="room__item room__item-3">
                         <p class="room__text">WILD WEST</p>
-                    </div>
-                    <div class="room__item room__item-4">
+                    </li>
+                    <li class="room__item room__item-4">
                         <p class="room__text">NEON STYLE</p>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </section>
 
@@ -62,21 +60,22 @@
             <div class="container">
                 <h2 class="about__title">О нас</h2>
                 <div class="about__block">
-                    <div class="about__img"></div>
-                    <p class="about__text">Для наших гостей мы создалии <i>концепутально новое игровое пространоство виртуальной реальности</i> в центральной части города.
-                        <br>
-                        <br>
-                        Каждый день мы стараемся создавать для вас лучшую игровую атмосферу и радовать Вас топовыми игровыми разработками со всего мира.
-                    </p>
+                    <div class="about__img">
+                        <p class="about__text">Для наших гостей мы создалии <i>концепутально новое игровое пространоство виртуальной реальности</i> в центральной части города.
+                            <br>
+                            <br>
+                            Каждый день мы стараемся создавать для вас лучшую игровую атмосферу и радовать Вас топовыми игровыми разработками со всего мира.
+                        </p>
 
-                    <p class="about__text about__author"> "GAME OVER — это место незабываемых впечатлений"
-                    </p>
+                        <p class="about__text about__author"> GAME OVER — это место незабываемых впечатлений
+                        </p>
 
-                    <ul class="about__text about__creator">
-                        <div class="about__creator-img">
-                            <li class="about__creator-text">Аркадий Абакшин,<br> создатель игровой <br> территории GAME OVER </li>
+                        <div class="about__text about__creator">
+                            <div class="about__creator-img">
+                                <p class="about__creator-text">Аркадий Абакшин,<br> создатель игровой <br> территории GAME OVER </p>
+                            </div>
                         </div>
-                    </ul>
+                    </div>
                 </div>
             </div>
         </section>
@@ -85,35 +84,26 @@
             <div class="container">
                 <h2 class="otzov__title" id="four">ОТЗЫВЫ ПОСЕТИТЕЛЕЙ</h2>
 
-                <table>
-                    <tr>
-                        <td>
-                            <div class="otzov__img otzov__img-1"></div>
-                            <label class="otzov__label">Макс Самойлов</label>
-                        </td>
-                        <td>
+                    <ul class="otzov__list">
+                        <li class="otzov__block otzov__block-1">
+                            <div class="otzov__img otzov__img-1">
                             <p class="otzov__text">Отмечали здесь день рождения с компанией друзей, все было очень круто! VR очки это просто бомба, никогда ещё я не был в таком полном игровом погружении. Сервис на высоте!</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="otzov__img otzov__img-2"></div>
-                            <label class="otzov__label">Оксана Григорьева</label>
-                        </td>
-                        <td>
+                            <p class="otzov__name">Макс Самойлов</p>
+                            </div>  
+                        </li>
+                        <li class="otzov__block otzov__block-2">
+                            <div class="otzov__img otzov__img-2">
                             <p class="otzov__text">Были в комнате Дикий Запад, пели караоке под Шакиру, отличный получился корпоратив! У нас в городе больше нет подобных заведений.</p>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <div class="otzov__img otzov__img-3"></div>
-                            <label class="otzov__label">Никита Ященко</label>
-                        </td>
-                        <td>
-                            <p class="otzov__text">Немного подвисала игра в VR очках, а так все норм. Крутое оформление комнаты в стиле звёздных войн, попал в атмосферу космоса</p>
-                        </td>
-                    </tr>
-                </table>
+                            <p class="otzov__name">Оксана Григорьева</p>
+                            </div>
+                        </li>
+                        <li class="otzov__block otzov__block-3">
+                            <div class="otzov__img otzov__img-3">
+                            <p class="otzov__text">Немного подвисала игра в VR очках, а так все норм. Крутое оформление комнаты в стиле звёздных войн, попал в атмосферу космоса.</p>
+                            <p class="otzov__name">Никита Ященко</p>
+                            </div>
+                        </li>
+                    </ul>
             </div>
         </section>
 
@@ -149,7 +139,7 @@
                     <div class="contact__info">
                         <ul class="contact__items">
                             <li class="contact__location contact__item">
-                                <a href="adress:г.Москва ул.Аквамарина,16"> г. Москва ул. Аквамарина,16
+                                <a href="adress:г.Москва,ул.Аквамарина,16"> г. Москва ул. Аквамарина,16
                                 </a>
                             </li>
                             <li class="contact__phone contact__item">
