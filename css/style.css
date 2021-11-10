@@ -5,13 +5,56 @@ body {
     font-family: Arial, sans-serif;
     min-width: 320px;
     min-height: 100vh;
+    font-size: 20px;
 }
+
+/*Navigation Start*/
+
+.nav__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navigation__list {
+    list-style: none;
+    display: inline-flex;
+    column-gap: 40px;
+    
+}
+
+.navigation__link {
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: normal;
+    color: #FFFFFF;
+}
+
+.search__button {
+    background: transparent;
+    border: #6C0287 solid 3px;
+    border-radius: 10px;
+    color: #FFFFFF;
+    font-size: 22px;
+    padding: 12px 32px;
+}
+
+
+
+/*Navigation END*/
 
 /*Header_wrapper Start*/
 
-h1, h2, h3, p {
-    font-family: "Arial black", sans-serif;
+h1, h2, h3 {
+    font-family: "Arial", sans-serif;
     font-weight: 900;
+    margin: 0;
+}
+
+h2, h3 {
+    font-family: "Arial", sans-serif;
+    font-weight: 700;
     margin: 0;
 }
 
@@ -23,7 +66,7 @@ h1, h2, h3, p {
 }
 
 section {
-    padding: 50px 0;
+    padding: 20px 0;
 }
 
 .main__container {
@@ -69,7 +112,108 @@ section {
     
 }
 
+.main__text-block {
+    width: 410px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    height: 350px;
+}
+
+.main__text-purple {
+    color: #6C0287;
+
+}
+
+.main__text-purple_number {
+    font-size: 100px;
+    width: 190px;
+    text-align: center;
+}
+
+.main__text-purple_text {
+    font-size: 80px;
+    width: 169px;
+}
+
+.main__text {
+    font-size: 28px;
+    width: 180px;
+    text-align: center;
+}
+
+.main__button {
+    background: #6C0287;
+    border:none;
+    border-radius: 5px;
+    color: #FFFFFF;
+    font-size: 22px;
+    padding: 25px 69px;
+    font-size: 26px;
+    position: absolute;
+    bottom: 100px;
+}
 /*Header_wrapper End*/
+
+/*Friends Start*/
+
+.friends__title {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 50px;
+    margin-bottom: 41px;
+}
+
+.friends__list{
+    display: flex;
+    align-items: center;
+    flex-wrap:nowrap;
+    gap: 20px;
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.friends__item-audio{
+    background: url(/img/audio.jpg);
+    width: 380px;
+    height: 228px;
+}
+
+.friends__item-games{
+    background: url(/img/game.jpg);
+    width: 380px;
+    height: 228px;
+}
+
+.friends__item-playstation{
+    background: url(/img/sony.jpg);
+    width: 380px;
+    height: 228px;
+}
+
+.friends__item-service{
+    background: url(/img/netflix.jpg);
+    width: 380px;
+    height: 228px;
+}
+
+.friends__item-sing{
+    background: url(/img/micro.jpg);
+    width: 380px;
+    height: 228px;
+}
+
+.friends__item-vr{
+    background: url(/img/vr.jpg); 
+    width: 380px;
+    height: 228px;  
+}
+
+/*Friends END*/
+
+
 
 /*Room Start*/
 
@@ -97,8 +241,8 @@ section {
     line-height: 80px;
     text-transform: uppercase;
     position: relative;
-    left: 160px;
-    top: 90px;
+    left: 150px;
+    top: 20px;
 }
 
 .room__item {
@@ -145,6 +289,125 @@ section {
 }
 
 /*Room END*/
+
+/*Reserve Start*/
+
+.container__reserve {
+    background-color:#440F51;
+    padding: 80px 145px;
+    
+}
+.reserve__fieldset {
+    border:0 none;
+}
+
+.reserve__title {
+    text-align: center;
+    font-weight: 700;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.reserve__undertitle {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.reserve__list-top {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 60px;
+}
+
+.reserve__item-button {
+    width: 250px;
+    height: 55px;
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+
+.reserve__undertitle-middle {
+    text-align: center;
+    font-size: 24px;
+}
+
+.reserve__middle {
+    display: flex;
+    justify-content: space-around;
+}
+
+.reserve__list-middle {
+    list-style: none;
+    margin-bottom: 21px;
+}
+.reserve__item-middle {
+    margin-bottom: 21px;
+}
+
+.reserve__bottom-list {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.reserve__list-bottom-double {
+    padding-top: 22px;
+}
+
+.reserve__list-bottom {
+    list-style: none;
+    
+}
+
+.reserve__item-bottom input {
+    height: 52px;
+    margin-bottom: 36px;
+    
+}
+
+.reserve__name {
+    width: 292px;
+}
+
+.reserve__name-bottom {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.reserve__name-double {
+    height: 52px;
+    margin-bottom: 36px;
+}
+
+.reserve__item-left {
+    margin-right: 18px;
+}
+
+.reserve__name-double {
+    width: 134px;
+}
+
+.reserve__name-solo {
+    width: 300px;
+}
+
+.reserve__button-bottom {
+    color: #6C0287;
+    padding: 16px 50px;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 28px;
+    border-radius: 10px;
+}
+
+
+
+
+/*Reserve END*/
 
 /*About Start*/
 
@@ -256,16 +519,17 @@ section {
 
 .otzov__name {
     padding-left: 65px;
-    padding-top: 110px;
+    padding-top: 40px;
 }
 
 
 .otzov__text {
     display: inline-block;
-    padding-left: 300px;
+    margin-left: 300px;
     width: 520px;
     height: 120px;
     padding-top: 60px;
+    font-weight: normal;
 }
 
 

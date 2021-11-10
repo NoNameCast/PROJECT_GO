@@ -22,16 +22,67 @@
     </header>
 
     <main>
+        <section class="navigation">
+            <div class="container">
+                <div class="nav__container">
+                <img src="img/top-logo.svg" alt="logo">
+
+                <nav class="navigation">
+                    <ul class="navigation__list">
+                        <li class="navigation__item">
+                            <a href="" class="navigation__link">залы</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="" class="navigation__link">О нас</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="" class="navigation__link">Бронь</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="" class="navigation__link">отзывы</a>
+                        </li>
+                        <li class="navigation__item">
+                            <a href="" class="navigation__link">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+                    <button type="submit" class="search__button" value="ЗАКАЗАТЬ ЗВОНОК">ЗАКАЗАТЬ ЗВОНОК</button>
+                </div>
+            </div>
+        </section>
+
         <section class="main">
             <div class="container">
                 <div class="main__container">
                     <h1 class="main__title">GAME OVER</h1>
                     <p class="main__subtitle">Новый формат игр и отдыха</p>
+                <div class="main__text-block">
+                    <div class="main__text-purple main__text-purple_number">4</div>
+                    <div class="main__text-purple main__text-purple_text">NEW</div>
+                    <div class="main__text">Тематических зала</div>
+                    <div class="main__text">Новейшая аппаратура</div>
+                </div>
+                    <button type="submit" class="main__button" value="ЗАКАЗАТЬ ЗВОНОК">ЗАБРОНИРОВАТЬ</button>
                 </div>
             </div>
-
         </section>
 
+        <section class="friends">
+            <div class="container">
+                <h2 class="friends__title">У нас есть все для классного <br> 
+                    отдыха с друзьями!</h2>
+                <ul class="friends__list">
+                    <li class="friends__item friends__item-vr"></li>
+                    <li class="friends__item friends__item-audio"></li>
+                    <li class="friends__item friends__item-sing"></li>
+                </ul>
+                <ul class="friends__list">
+                    <li class="friends__item friends__item-games"></li>
+                    <li class="friends__item friends__item-service"></li>
+                    <li class="friends__item friends__item-playstation"></li>
+                </ul>
+            </div>
+        </section>
         <section class="room">
             <div class="container">
                 <h2 class="room__title">
@@ -52,6 +103,83 @@
                         <p class="room__text">NEON STYLE</p>
                     </li>
                 </ul>
+            </div>
+        </section>
+
+        <section class="reserve">
+            <div class="container container__reserve">
+                <form action="https://jsonplaceholder.typicode.com/posts"
+                method="POST">
+                    <h2 class="reserve__title">ЗАБРОНИРОВАТЬ ЗАЛ ПРОСТО</h2>
+                    <p class="reserve__undertitle">Выбери зал</p>
+                <div class="reserve__list-top">    
+                    <button class="reserve__item-button" value="80's vibe">80's vibe</button>
+                    <button class="reserve__item-button" value="Star wars" form="">Star wars</button>
+                    <button class="reserve__item-button" value="Wild West" form="">Wild West</button>
+                    <button class="reserve__item-button" value="Neon Style" form="">Neon Style</button>
+                </div> 
+                
+                <div class="reserve__tool">
+                    <p class="reserve__undertitle-middle">Собери набор развлечений</p>
+                    <fieldset class="reserve__fieldset reserve__middle">
+                        <ul class="reserve__list-middle">
+                            <li class="reserve__item-middle">Приставка:</li>
+                            <li class="reserve__item-middle"><input type="radio" name="">PlayStation 5</li>
+                            <li class="reserve__item-middle"><input type="radio" name="">Sega Mega Drive</li>
+                            <li class="reserve__item-middle"><input type="radio" name="">X-box One S</li>
+                            <li class="reserve__item-middle"><input type="radio" name="">Dendy</li>
+                        </ul>
+                        <ul class="reserve__list-middle">
+                            <li class="reserve__item-middle"> Настольные игры</li>
+                            <li class="reserve__item-middle"><input type="checkbox" name="">Jenga</li>
+                            <li class="reserve__item-middle"><input type="checkbox" name="">Monopoly</li>
+                            <li class="reserve__item-middle"><input type="checkbox" name="">Манчкин</li>
+                            <li class="reserve__item-middle"><input type="checkbox" name="">Alias</li>
+                        </ul>
+                        <ul class="reserve__list-middle">
+                            <li class="reserve__item-middle">Дополнительно</li>
+                            <li class="reserve__item-middle"><input type="radio" name="">Караоке</li>
+                            <li class="reserve__item-middle"><input type="radio" name="">VR</li>
+                        </ul>
+                    </fieldset>
+
+                    <fieldset class="reserve__fieldset reserve__bottom">
+                        <p class="reserve__undertitle-middle">Выбери дату и время</p>
+                        <div class="reserve__bottom-list">
+                        <ul class="reserve__list-bottom reserve__list-bottom-double">
+                            <li class="reserve__item-bottom reserve__item-bottom-double">
+                                <input class="reserve__name-double reserve__item-left" type="number" name="date" min="1" max="31" placeholder="Дата">
+                                <input class="reserve__name-double reserve__item-right" type="number" name="time" min="9" max="20" step="1" placeholder="Время">
+                            </li>
+                            <li class="reserve__item-bottom">
+                                <input class="reserve__name-solo" type="number" name="people" placeholder="Сколько человек" min="1" max="">
+                            </li>
+                        </ul>
+                        <ul class="reserve__list-bottom">
+                            <li class="reserve__item-bottom">
+                                <label class="reserve__name-bottom" for="anme">Имя</label><br>
+                                <input class="reserve__name" type="name" name="name" required>
+                                <label class="reserve__name-bottom" for="second_name">Фамилия</label><br>
+                                <input class="reserve__name" type="name" name="second_name">
+                            </li>
+                        </ul>
+                        <ul class="reserve__list-bottom">
+                            <li class="reserve__item-bottom">
+                                <label class="reserve__name-bottom" for="tel">Телефон</label><br>
+                                <input class="reserve__name" type="tel" name="tel" required>
+                                <label class="reserve__name-bottom" for="email">E-mail</label>
+                                <input class="reserve__name" type="email" name="email" required>
+                            </li>
+                            <li class="reserve__item-bottom">
+                                <button class="reserve__button-bottom" value="order">ЗАБРОНИРОВАТЬ</button>
+                            </li>
+                        </ul>
+                        </div>
+                    </fieldset>
+                </div>
+
+
+                </form>
             </div>
         </section>
 
