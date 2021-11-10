@@ -175,6 +175,14 @@ section {
     margin-bottom: 40px;
 }
 
+.friends__item {
+    transition: 1s;
+}
+
+.friends__item:hover {
+    transform: scale(1.1);
+}
+
 .friends__item-audio{
     background: url(/img/audio.jpg);
     width: 380px;
