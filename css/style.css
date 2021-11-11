@@ -38,9 +38,21 @@ body {
     color: #FFFFFF;
     font-size: 22px;
     padding: 12px 32px;
+    cursor: pointer;
 }
 
+.search__button:hover {
+    background-color: #6C0287;
+    transition-duration: 0.3s;
+}
 
+.search__button:focus {
+    background-color: #6C0287;
+}
+
+.search__button:active {
+    background-color: #640AA3;
+}
 
 /*Navigation END*/
 
@@ -120,6 +132,12 @@ section {
     height: 350px;
 }
 
+.main__text-block::after {
+    background: url(/img/down-button.svg) no-repeat;
+    width: 97px;
+    height: 97px;
+}
+
 .main__text-purple {
     color: #6C0287;
 
@@ -153,6 +171,41 @@ section {
     position: absolute;
     bottom: 100px;
 }
+
+.main__button:hover {
+    background-color: #840AA3;
+    transition-duration: 0.3s;
+}
+
+.main__button:focus {
+    background-color: #840AA3;
+}
+
+.main__button:active {
+    background-color: #640AA3;
+}
+
+.main__button-down {
+    background: url(/img/down-button.svg) no-repeat;
+    width: 97px;
+    height: 97px;
+    position: absolute;
+    left: 550px;
+    bottom: 40px;
+    z-index: 1;
+}
+
+.main__button-down:hover .main__button-down:focus {
+    background: url(/img/main_button_hover_white.svg);
+    transition-duration: 0.3s;
+}
+
+.main__button-down:active {
+    background: url(/img/main_button_hover_purple.svg);
+}
+
+
+
 /*Header_wrapper End*/
 
 /*Friends Start*/
@@ -265,6 +318,11 @@ section {
     height: 349px;
 }
 
+.room__item:hover {
+    transform: scale(1.1);
+    transition-duration: 0.5s;
+}
+
 .room__item:not(:nth-child(2n)) {
     float: left;
 }
@@ -305,43 +363,68 @@ section {
     padding: 80px 145px;
     
 }
-.reserve__fieldset {
-    border:0 none;
-}
 
-.reserve__title {
+.reserve__fieldset-top {
     text-align: center;
     font-weight: 700;
     font-size: 40px;
     margin-bottom: 40px;
 }
 
+
+.reserve__fieldset {
+    border:0 none;
+}
+
+.reserve__title {
+    margin-bottom: 40px;
+}
+
 .reserve__undertitle {
-    text-align: center;
     font-size: 24px;
     font-weight: 700;
-    margin-bottom: 40px;
 }
 
 .reserve__list-top {
     display: flex;
     justify-content: space-evenly;
     margin-bottom: 60px;
+    gap: 60px;
 }
 
-.reserve__item-button {
-    width: 250px;
-    height: 55px;
+.reserve__list-top input[type=radio] {
+	display: none;
+}
+.reserve__list-top label {
+	cursor: pointer;
+	padding: 8px 15px;
+	border-radius: 8px;
+    background-color: #fff;
+    color: #1B1A1B;
     font-size: 30px;
-    font-weight: bold;
+    font-weight: 700;
     text-transform: uppercase;
-    border-radius: 10px;
+    width: 220px;
+    text-align: center;
 }
 
-.reserve__undertitle-middle {
-    text-align: center;
-    font-size: 24px;
+
+.reserve__item-top:hover {
+    outline: #640AA3 3px solid;
 }
+
+.reserve__item-top:focus {
+    outline: #640AA3 3px solid;
+}
+
+.reserve__item-top:active {
+    outline: none;
+}
+
+.reserve__fieldset-middle {
+    text-align: center;
+}
+
 
 .reserve__middle {
     display: flex;
@@ -352,68 +435,71 @@ section {
     list-style: none;
     margin-bottom: 21px;
 }
+
 .reserve__item-middle {
     margin-bottom: 21px;
 }
 
-.reserve__bottom-list {
-    display: flex;
-    justify-content: space-around;
-
+.reserve__item-middle input:focus {
+    outline: 2px #CD06FF solid;
 }
 
-.reserve__list-bottom-double {
-    padding-top: 22px;
-}
-
-.reserve__list-bottom {
-    list-style: none;
-    
-}
-
-.reserve__item-bottom input {
-    height: 52px;
-    margin-bottom: 36px;
-    
-}
-
-.reserve__name {
-    width: 292px;
-}
-
-.reserve__name-bottom {
-    font-size: 14px;
-    line-height: 16px;
-}
-
-.reserve__name-double {
-    height: 52px;
-    margin-bottom: 36px;
-}
-
-.reserve__item-left {
-    margin-right: 18px;
-}
-
-.reserve__name-double {
-    width: 134px;
-}
-
-.reserve__name-solo {
-    width: 300px;
+.reserve__fieldset-bottom {
+    text-align: center;
 }
 
 .reserve__button-bottom {
-    color: #6C0287;
-    padding: 16px 50px;
-    font-size: 22px;
-    font-weight: bold;
-    line-height: 28px;
-    border-radius: 10px;
+  color: #6C0287;
+  padding: 16px 50px;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 28px;
+  border-radius: 10px;
 }
 
+.test {
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 10px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "date time firstname phone"
+      "people people lastname email"
+      ". . . button";
+  }
 
+  .test div{
+    display: flex;
+    flex-direction: column;
+    align-self:end;
+  }
 
+  .text label{
+    color:white;
+  }
+  
+  .test input,
+  button{
+    height:50px;
+  }
+  
+  .date { grid-area: date; }
+  
+  .time { grid-area: time; }
+  
+  .people { grid-area: people; }
+  
+  .firstname { grid-area: firstname; }
+  
+  .lastname { grid-area: lastname; }
+  
+  .phone { grid-area: phone; }
+  
+  .email { grid-area: email; }
+  
+  .button { grid-area: button; }
 
 /*Reserve END*/
 
@@ -634,6 +720,20 @@ section {
     top: 18px;
 }
 
+.faq__item:nth-child(even)
+.faq__active:hover:after {
+    background-image: url(/img/open_hover_purple.svg);
+    background-size: contain;
+    transition-duration: 0.3s;
+   }
+
+.faq__item:nth-child(odd)
+.faq__active:hover:after {
+    background-image: url(/img/open_hover_white.svg);
+    background-size: contain;
+    transition-duration: 0.3s;
+   }
+
 /*FAQ END*/
 
 /*Contact Start*/
@@ -699,7 +799,7 @@ section {
 
 .social__link_inst {
     content: "";
-    background-image: url("../img/instagram.svg");
+    background: url("../img/instagram.svg");
     width: 50px;
     height: 50px;
     display: inline-block;
@@ -709,7 +809,7 @@ section {
 
 .social__link_vk {
     content: "";
-    background-image: url("../img/vk.svg");
+    background: url("../img/vk.svg");
     width: 50px;
     height: 50px;
     display: inline-block;
@@ -718,7 +818,7 @@ section {
 
 .social__link_fb {
     content: "";
-    background-image: url("../img/facebook.svg");
+    background: url("../img/facebook.svg");
     width: 50px;
     height: 50px;
     display: inline-block;
@@ -727,10 +827,24 @@ section {
 
 .social__link_tg {
     content: "";
-    background-image: url("../img/telegram.svg");
+    background: url("../img/telegram.svg");
     width: 50px;
     height: 50px;
     display: inline-block;
+}
+
+.social__link:hover {
+    opacity: 0.7;
+    transition-duration: 0.3s;
+}
+
+.social__link:focus {
+    transition-duration: 0.3s;
+}
+
+.social__link:active {
+    background: url(/img/instagram_hover_purpule.svg);
+    opacity: 0.3s;
 }
 
 /*Footer END*/
