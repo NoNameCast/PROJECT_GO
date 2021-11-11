@@ -31,6 +31,18 @@ body {
     color: #FFFFFF;
 }
 
+
+.navigation__link:hover {
+    color: yellow;
+    transition-duration: 0.5s;
+}
+
+.navigation__link:active {
+    color: orange;
+}
+
+
+
 .search__button {
     background: transparent;
     border: #6C0287 solid 3px;
@@ -410,7 +422,7 @@ section {
 
 
 .reserve__item-top:hover {
-    outline: #640AA3 3px solid;
+    border: red 3px solid;
 }
 
 .reserve__item-top:focus {
@@ -480,8 +492,7 @@ section {
     color:white;
   }
   
-  .test input,
-  button{
+  .test input {
     height:50px;
   }
   
@@ -499,7 +510,7 @@ section {
   
   .email { grid-area: email; }
   
-  .button { grid-area: button; }
+  .reserve__button-bottom { grid-area: button; }
 
 /*Reserve END*/
 
