@@ -371,6 +371,7 @@ section {
 /*Reserve Start*/
 
 .container__reserve {
+    border: 0 none;
     background-color:#440F51;
     padding: 80px 145px;
     
@@ -389,6 +390,7 @@ section {
 }
 
 .reserve__title {
+    text-align: center;
     margin-bottom: 40px;
 }
 
@@ -424,11 +426,12 @@ section {
 
 
 .reserve__item-top:hover {
-    border: red 3px solid;
+    box-shadow: inset 0 0 1px 2px red;
 }
 
-.reserve__item-top:focus {
-    outline: #640AA3 3px solid;
+.reserve__item-top:focus, {
+    outline: none;
+    box-shadow: inset 0 0 1px 2px #cd06ff;
 }
 
 .reserve__item-top:active {
@@ -458,8 +461,9 @@ section {
     outline: 2px #CD06FF solid;
 }
 
-.reserve__fieldset-bottom {
+.reserve__undertitle-middle {
     text-align: center;
+    margin-bottom: 40px;
 }
 
 .reserve__button-bottom {
@@ -469,50 +473,63 @@ section {
   font-weight: bold;
   line-height: 28px;
   border-radius: 10px;
+  height: 60px;
 }
 
-.test {
-    width: 300px;
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows: repeat(3,1fr);
-    gap: 10px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "date time firstname phone"
-      "people people lastname email"
-      ". . . button";
-  }
-
-  .test div{
+.reserve__fieldset-bottom{
+    margin: 0 auto;
     display: flex;
-    flex-direction: column;
-    align-self:end;
-  }
+    flex-wrap: wrap;
+    gap: 32px;
+    min-width: min-content;
+    max-width: max-content;
+    justify-content: center;
+}
 
-  .text label{
-    color:white;
-  }
-  
-  .test input {
-    height:50px;
-  }
-  
-  .date { grid-area: date; }
-  
-  .time { grid-area: time; }
-  
-  .people { grid-area: people; }
-  
-  .firstname { grid-area: firstname; }
-  
-  .lastname { grid-area: lastname; }
-  
-  .phone { grid-area: phone; }
-  
-  .email { grid-area: email; }
-  
-  .reserve__button-bottom { grid-area: button; }
+.reserve__div {
+    position: relative;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    gap: 36px;
+    width: 310px;
+    padding: 0;
+    border: none;
+}
+
+.reserve__div label {
+    position: absolute;
+}
+
+.reserve__div label:nth-of-type(1) { top: -25px; }
+.reserve__div label:nth-of-type(2) { top: 60px; }
+
+
+#date {
+    width: 129px;
+}
+
+#time {
+    width: 129px;
+}
+
+
+
+.reserve__item-bottom {
+    width: 292px;
+    height: 46px;
+    display: inline-flex;
+
+    
+}
+
+.reserve__item-bottom:focus, .reserve__item-bottom:active {
+    outline: none;
+    box-shadow: inset 0 0 1px 2px #cd06ff;
+}
+
+
 
 /*Reserve END*/
 

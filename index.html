@@ -108,11 +108,11 @@
         </section>
 
         <section class="reserve">
-            <div class="container container__reserve">
+            <fieldset class="container container__reserve">
                 <form action="https://jsonplaceholder.typicode.com/posts"
                 method="POST">
+                <h2 class="reserve__title">ЗАБРОНИРОВАТЬ ЗАЛ ПРОСТО</h2>
                 <fieldset class="reserve__fieldset reserve__fieldset-top">
-                    <legend class="reserve__title">ЗАБРОНИРОВАТЬ ЗАЛ ПРОСТО</legend>
                     <legend class="reserve__undertitle">Выбери зал</legend>
                 </fieldset> 
                 <fieldset class="reserve__fieldset reserve__list-top">
@@ -125,10 +125,8 @@
                     <input type="radio" name="Neon Style" id="" class="reserve__item-top">
                     <label for="item-top">Neon Style</label>    
                 </fieldset>
-                <fieldset class="reserve__fieldset reserve__fieldset-middle">
-                    <legend class="reserve__undertitle reserve__undertitle-middle">Собери набор развлечений</legend>
-                </fieldset>
                     <fieldset class="reserve__fieldset reserve__middle">
+                        <legend class="reserve__undertitle reserve__undertitle-middle">Собери набор развлечений</legend>
                         <ul class="reserve__list-middle">
                             <li class="reserve__item-middle">Приставка:</li>
                             <li class="reserve__item-middle"><input type="radio" name="">PlayStation 5</li>
@@ -152,41 +150,27 @@
 
                     <fieldset class="reserve__fieldset reserve__fieldset-bottom">
                         <legend class="reserve__undertitle reserve__undertitle-middle">Выбери дату и время</legend>
-                    </fieldset>
-                    <fieldset class="reserve__fieldset">
-                        <div class="test">
-                            <div class="date">
-                              <input type="date">
-                            </div>
-                            <div class="time">
-                              <input type="date">
-                            </div>
-                            <div class="people">
-                              <input type="text">
-                            </div>
-                            <div class="firstname">
-                              <label for="firstname">Имя</label>
-                              <input type="text">
-                            </div>
-                            <div class="lastname">
-                              <label for="lastname">Фамилия</label>
-                              <input type="text">
-                            </div>
-                            <div class="phone">
-                              <label for="phone">Телефон</label>
-                              <input type="text">
-                            </div>
-                            <div class="email">
-                              <label for="email">e-mail</label>
-                              <input type="text">
-                            </div>
-                            <div class="button">
-                              <a href=""><button class="reserve__button-bottom">Забронировать</button></a>
-                            </div>
-                          </div>
+                    <div class="reserve__div reserve__div-first">
+                        <input class="reserve__item-bottom" type="date" name="form" placeholder="Дата" id="date">
+                        <input class="reserve__item-bottom" type="time" name="form" placeholder="Время" id="time">
+                        <input class="reserve__item-bottom" type="number" name="form" min="1" placeholder="Сколько человек" id="people">
+                    </div>
+                    <div class="reserve__div reserve__div-second">
+                        <label for="form">Имя</label>
+                        <input class="reserve__item-bottom" type="name" name="name" required id="name">
+                        <label for="form">Фамилия</label>
+                        <input class="reserve__item-bottom" type="name" name="second_name" id="second_name">
+                    </div>
+                    <div class="reserve__div reserve__div-third">
+                        <label for="form">Телефон</label>
+                        <input class="reserve__item-bottom" type="tel" name="tel" required id="tel">
+                        <label for="form">E-mail</label>
+                        <input class="reserve__item-bottom" type="email" name="email" required id="email">
+                        <input class="reserve__button-bottom" type="button" value="ЗАБРОНИРОВАТЬ" id="button">
+                    </div>
                     </fieldset>
                 </form>
-            </div>
+            </fieldset>
         </section>
 
 
