@@ -461,6 +461,14 @@ section {
     margin-bottom: 21px;
 }
 
+.reserve__item-middle input[type='radio'] {
+    margin-right: 10px;
+}
+
+.reserve__item-middle input[type='checkbox'] {
+    margin-right: 10px;
+}
+
 .reserve__item-middle input:focus {
     outline: 2px #CD06FF solid;
 }
