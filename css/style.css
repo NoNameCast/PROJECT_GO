@@ -164,8 +164,10 @@ section {
 }
 
 .main__text-purple_text {
+    display: flex;
     font-size: 80px;
     width: 169px;
+    align-items: flex-end;
 }
 
 .main__text {
