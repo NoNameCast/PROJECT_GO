@@ -412,12 +412,14 @@ section {
     gap: 60px;
 }
 
-.reserve__list-top input[type=radio] {
-	appearance: none;
+.reserve__item-top {
+    position: absolute;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
-.reserve__list-top label {
-	cursor: pointer;
+.reserve__fieldset-label {
 	padding: 8px 15px;
 	border-radius: 8px;
     background-color: var(--text-color);
@@ -427,19 +429,23 @@ section {
     text-transform: uppercase;
     width: 220px;
     text-align: center;
+    display: inline-block;
+    cursor: pointer;
 }
 
 
-.reserve__item-top:hover {
-    outline: 3px red solid;
+.reserve__item-top:hover  + .reserve__fieldset-label {
+    background: #EADEED;
+    border: 3px solid #640AA3;
 }
 
-.reserve__item-top:focus {
-    outline: 3px red solid;
+.reserve__item-top:focus  + .reserve__fieldset-label {
+    background: #FFFFFF;
+    border: 3px solid #640AA3;
 }
 
-.reserve__item-top:active {
-    outline: none;
+.reserve__item-top:active  + .reserve__fieldset-label {
+    background: #EADEED;
 }
 
 .reserve__fieldset-middle {
@@ -774,7 +780,7 @@ section {
     background-image: url(/img/open_hover_white.svg);
     background-size: contain;
     transition-duration: 0.3s;
-   }
+}
 
 /*FAQ END*/
 

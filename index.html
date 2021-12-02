@@ -117,13 +117,16 @@
                 </fieldset> 
                 <fieldset class="reserve__fieldset reserve__list-top">
                     <input type="radio" name="80's vibe" id="first_top" class="reserve__item-top">
-                    <label for="first_top">80's vibe</label>
+                    <label for="first_top" class="reserve__fieldset-label">80's vibe</label>
+
                     <input type="radio" name="Star wars" id="second_top" class="reserve__item-top">
-                    <label for="second_top">Star wars</label>
+                    <label for="second_top" class="reserve__fieldset-label">Star wars</label>
+
                     <input type="radio" name="Wild West" id="third_top" class="reserve__item-top">
-                    <label for="third_top">Wild West</label>
+                    <label for="third_top" class="reserve__fieldset-label">Wild West</label>
+                    
                     <input type="radio" name="Neon Style" id="four_top" class="reserve__item-top">
-                    <label for="four_top">Neon Style</label>    
+                    <label for="four_top" class="reserve__fieldset-label">Neon Style</label>    
                 </fieldset>
                     <fieldset class="reserve__fieldset reserve__middle">
                         <legend class="reserve__undertitle reserve__undertitle-middle">Собери набор развлечений</legend>
@@ -176,7 +179,7 @@
                         <input class="reserve__item-bottom" type="tel" name="tel" required id="tel">
                         <label for="form">E-mail</label>
                         <input class="reserve__item-bottom" type="email" name="email" required id="email">
-                        <input class="reserve__button-bottom" type="button" value="ЗАБРОНИРОВАТЬ" id="button">
+                        <input class="reserve__button-bottom" type="submit" value="ЗАБРОНИРОВАТЬ" id="button">
                     </div>
                     </fieldset>
                 </form>
@@ -241,18 +244,34 @@
                     <h2 class="faq__title">Частые вопросы</h2>
                     <ul class="faq__list">
                         <li class="faq__item">
-                            <button class="faq__active" type="button">Можно ли забронировать комнату онлайн?</button></li>
-                        <li class="faq__item">
-                            <button class="faq__active" type="button">Могут ли мне вернуть деньги за бронь?</button>
+                            <h3 class="faq__active faq__active-white" type="button">Можно ли забронировать комнату онлайн?</h3>
+                                <p class="faq__accordions-content">
+                                    Тут должен быть осмысленный текст
+                                </p>
                         </li>
                         <li class="faq__item">
-                            <button class="faq__active" type="button">Какая комната самая популярная?</button>
+                            <h3 class="faq__active faq__active-purple" type="button">Могут ли мне вернуть деньги за бронь?</h3>
+                                <p class="faq__accordions-content">
+                                    Тут должен быть осмысленный текст
+                                </p>
                         </li>
                         <li class="faq__item">
-                            <button class="faq__active" type="button">Как получить VIP карту?</button>
+                            <h3 class="faq__active faq__active-white" type="button">Какая комната самая популярная?</h3>
+                                <p class="faq__accordions-content">
+                                    Тут должен быть осмысленный текст
+                                </p>
                         </li>
                         <li class="faq__item">
-                            <button class="faq__active" type="button">Какая комната самая популярная?</button>
+                            <h3 class="faq__active faq__active-purple" type="button">Как получить VIP карту?</h3>
+                                <p class="faq__accordions-content">
+                                    Тут должен быть осмысленный текст
+                                </p>
+                        </li>
+                        <li class="faq__item">
+                            <h3 class="faq__active faq__active-white" type="button">Какая комната самая популярная?</h3>
+                                <p class="faq__accordions-content">
+                                    Тут должен быть осмысленный текст
+                                </p>
                         </li>
                     </ul>
                 </div>
@@ -307,7 +326,8 @@
 
     </footer>
 
-
+<link rel="stylesheet" href="js/jquery-ui.min.js" defer>
+<link rel="stylesheet" href="js/js.js" defer>
 
 </body>
 
