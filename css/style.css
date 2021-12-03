@@ -261,37 +261,37 @@ section {
 }
 
 .friends__item-audio{
-    background: url(/img/audio.jpg);
+    background: url(../img/audio.jpg);
     width: 380px;
     height: 228px;
 }
 
 .friends__item-games{
-    background: url(/img/game.jpg);
+    background: url(../img/game.jpg);
     width: 380px;
     height: 228px;
 }
 
 .friends__item-playstation{
-    background: url(/img/sony.jpg);
+    background: url(../img/sony.jpg);
     width: 380px;
     height: 228px;
 }
 
 .friends__item-service{
-    background: url(/img/netflix.jpg);
+    background: url(../img/netflix.jpg);
     width: 380px;
     height: 228px;
 }
 
 .friends__item-sing{
-    background: url(/img/micro.jpg);
+    background: url(../img/micro.jpg);
     width: 380px;
     height: 228px;
 }
 
 .friends__item-vr{
-    background: url(/img/vr.jpg); 
+    background: url(../img/vr.jpg); 
     width: 380px;
     height: 228px;  
 }
