@@ -206,7 +206,7 @@ section {
 }
 
 .main__button-down {
-    background: url(/img/down-button.svg) no-repeat;
+    background: url(../img/down-button.svg) no-repeat;
     width: 97px;
     height: 97px;
     position: absolute;
@@ -215,13 +215,17 @@ section {
     z-index: 1;
 }
 
-.main__button-down:hover .main__button-down:focus {
-    background: url(/img/main_button_hover_white.svg);
+.main__button-down:hover  {
+    background: url(../img/main_button_hover_white.svg);
     transition-duration: 0.3s;
 }
 
 .main__button-down:active {
-    background: url(/img/main_button_hover_purple.svg);
+    background: url(../img/main_button_hover_purple.svg);
+}
+
+.main__button-down:focus {
+    outline: 1px solid #CD06FF;
 }
 
 
@@ -341,6 +345,8 @@ section {
 .room__item:hover {
     transform: scale(1.1);
     transition-duration: 0.5s;
+    z-index: 10;
+    
 }
 
 .room__item:not(:nth-child(2n)) {
@@ -352,12 +358,14 @@ section {
     content: "";
     background: url(../img/vibe-80s.jpg)no-repeat;
     background-size: contain;
+    position: relative;
 }
 
 .room__item-2 {
     content: "";
     background: url(../img/star-wars.jpg)no-repeat;
     background-size: contain;
+    position: relative;
 }
 
 
@@ -365,6 +373,7 @@ section {
     content: "";
     background: url(../img/wild-west.jpg)no-repeat;
     background-size: contain;
+    position: relative;
 }
 
 
@@ -372,6 +381,8 @@ section {
     content: "";
     background: url(../img/neon.jpg)no-repeat;
     background-size: contain;
+    position: relative;
+    z-index: 1;
 }
 
 /*Room END*/
@@ -440,12 +451,12 @@ section {
 
 .reserve__item-top:hover  + .reserve__fieldset-label {
     background: #EADEED;
-    border: 3px solid #640AA3;
+    outline: 3px solid #640AA3;
 }
 
 .reserve__item-top:focus  + .reserve__fieldset-label {
     background: #FFFFFF;
-    border: 3px solid #640AA3;
+    outline: 3px solid #640AA3;
 }
 
 .reserve__item-top:active  + .reserve__fieldset-label {
@@ -473,10 +484,13 @@ section {
 
 .reserve__item-middle input[type='radio'] {
     margin-right: 10px;
+    transform:scale(1.4);
+    
 }
 
 .reserve__item-middle input[type='checkbox'] {
     margin-right: 10px;
+    transform:scale(1.4);
 }
 
 .reserve__item-middle input:focus {
@@ -779,15 +793,15 @@ section {
     transition-duration: 0.3s;
 }
 
-.faq__active:hover {
+.faq__item:hover {
     opacity: 0.8;
 }
 
-.faq__active:focus {
+.faq__item:focus {
     outline: none;
 }
 
-.faq__active:active {
+.faq__item:active {
     outline: 2px solid black;
     border-radius: 5px;
 }
