@@ -723,11 +723,9 @@ section {
 }
 
 .faq__active {
-    padding: 0;
-    border: none;
+    width: 780px;
     font: inherit;
     color: inherit;
-    background-color: transparent;
     cursor: pointer;
 }
 
@@ -775,6 +773,19 @@ section {
     background-image: url(/img/open_hover_white.svg);
     background-size: contain;
     transition-duration: 0.3s;
+}
+
+.faq__active:hover {
+    opacity: 0.8;
+}
+
+.faq__active:focus {
+    outline: none;
+}
+
+.faq__active:active {
+    outline: 2px solid black;
+    border-radius: 5px;
 }
 
 .faq__accordions-content {
