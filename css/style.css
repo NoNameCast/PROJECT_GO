@@ -782,14 +782,12 @@ section {
 .faq__item:nth-child(even)
 .faq__active:hover:after {
     background-image: url(/img/open_hover_purple.svg);
-    background-size: contain;
     transition-duration: 0.3s;
    }
 
 .faq__item:nth-child(odd)
 .faq__active:hover:after {
     background-image: url(/img/open_hover_white.svg);
-    background-size: contain;
     transition-duration: 0.3s;
 }
 
@@ -809,6 +807,8 @@ section {
 .faq__accordions-content {
     font-size: 20px;
     font-weight: 400;
+    margin: 0;
+    padding-top: 20px;
 }
 
 /*FAQ END*/

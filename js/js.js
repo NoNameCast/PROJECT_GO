@@ -1,6 +1,8 @@
 $('.faq__item').accordion({
     active: true,
     collapsible: true,
+    heightStyle: "content",
+    animate: 400,
 });
 
 
