@@ -10,6 +10,10 @@ body {
     font-size: 20px;
 }
 
+ul {
+    margin: 0;
+}
+
 /*Navigation Start*/
 
 .nav__container {
@@ -797,7 +801,6 @@ section {
 
 /*Contact Start*/
 
-
 .contact__title {
     text-align: center;
     font-family: Arial;
@@ -805,11 +808,13 @@ section {
     font-weight: bold;
     font-size: 40px;
     line-height: 50px;
+    margin-bottom: 40px;
 }
 
 .contact__info {
-    width: 360px;
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 146px;
 }
 
 .contact__items {
@@ -820,6 +825,7 @@ section {
     font-size: 24px;
     display:inline-block;
     list-style: none;
+    margin-bottom: 35px;
 }
 
 .contact__location {
@@ -845,7 +851,16 @@ section {
     color: var(--text-color);
     text-decoration: none;
     padding-left: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 19px;
+}
+
+.contact__item:first-child {
+    margin-bottom: 40px;
+    
+}
+
+.map {
+    display: flex;
 }
 
 /*Contact END*/
@@ -904,6 +919,23 @@ section {
 .social__link:active {
     background: url(/img/instagram_hover_purpule.svg);
     opacity: 0.3s;
+}
+
+.footer__list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.footer__item {
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.footer__item-right {
+    width: 157px;
+    line-height: 22px;
 }
 
 /*Footer END*/
