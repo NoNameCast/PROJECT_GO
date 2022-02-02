@@ -24,8 +24,19 @@
     <main>
         <section class="navigation">
             <div class="container">
+                <div class="navigation__modal">
+                    <ul class="navigation__modal-list">
+                        <li class="navigation__modal-item">залы</li>
+                        <li class="navigation__modal-item">О нас</li>
+                        <li class="navigation__modal-item">Бронь</li>
+                        <li class="navigation__modal-item">отзывы</li>
+                        <li class="navigation__modal-item">Контакты</li>
+                    </ul>
+
+                </div>
                 <div class="nav__container">
-                <img src="img/top-logo.svg" alt="logo">
+                <div class="navigation__menu-button"></div>
+                <img src="img/top-logo.svg" alt="logo" class="nav__logo">
 
                 <nav class="navigation">
                     <ul class="navigation__list">
@@ -76,8 +87,6 @@
                     <li class="friends__item friends__item-vr"></li>
                     <li class="friends__item friends__item-audio"></li>
                     <li class="friends__item friends__item-sing"></li>
-                </ul>
-                <ul class="friends__list">
                     <li class="friends__item friends__item-games"></li>
                     <li class="friends__item friends__item-service"></li>
                     <li class="friends__item friends__item-playstation"></li>
@@ -222,7 +231,7 @@
         <section class="otzov">
             <div class="container">
                 <h2 class="otzov__title" id="four">ОТЗЫВЫ ПОСЕТИТЕЛЕЙ</h2>
-
+                <div class="otzov__slider">
                     <ul class="otzov__list">
                         <li class="otzov__block otzov__block-1">
                             <div class="otzov__img otzov__img-1">
@@ -243,6 +252,7 @@
                             </div>
                         </li>
                     </ul>
+                </div>
             </div>
         </section>
 
@@ -252,31 +262,31 @@
                     <h2 class="faq__title">Частые вопросы</h2>
                     <ul class="faq__list">
                         <li class="faq__item">
-                            <h3 class="faq__active faq__active-white" type="button">Можно ли забронировать комнату онлайн?</h3>
+                            <h3 class="faq__active" type="button">Можно ли забронировать комнату онлайн?</h3>
                                 <p class="faq__accordions-content">
                                     Mauris risus nulla, Vehicula nec diam ut, ornare ultrices nisi neque sed lacinia scelerisque.
                                 </p>
                         </li>
                         <li class="faq__item">
-                            <h3 class="faq__active faq__active-purple">Могут ли мне вернуть деньги за бронь?</h3>
+                            <h3 class="faq__active">Могут ли мне вернуть деньги за бронь?</h3>
                                 <p class="faq__accordions-content">
                                     Mauris risus nulla, Vehicula nec diam ut, ornare ultrices nisi neque sed lacinia scelerisque.
                                 </p>
                         </li>
                         <li class="faq__item">
-                            <h3 class="faq__active faq__active-white">Какая комната самая популярная?</h3>
+                            <h3 class="faq__active">Какая комната самая популярная?</h3>
                                 <p class="faq__accordions-content">
                                     Mauris risus nulla, Vehicula nec diam ut, ornare ultrices nisi neque sed lacinia scelerisque.
                                 </p>
                         </li>
                         <li class="faq__item">
-                            <h3 class="faq__active faq__active-purple">Как получить VIP карту?</h3>
+                            <h3 class="faq__active">Как получить VIP карту?</h3>
                                 <p class="faq__accordions-content">
                                     Mauris risus nulla, Vehicula nec diam ut, ornare ultrices nisi neque sed lacinia scelerisque.
                                 </p>
                         </li>
                         <li class="faq__item">
-                            <h3 class="faq__active faq__active-white">Какая комната самая популярная?</h3>
+                            <h3 class="faq__active">Какая комната самая популярная?</h3>
                                 <p class="faq__accordions-content">
                                     Mauris risus nulla, Vehicula nec diam ut, ornare ultrices nisi neque sed lacinia scelerisque.
                                 </p>
@@ -340,9 +350,11 @@
             </div>
         </section>
     </footer>
+<script src="js/input.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?apikey=81f0837b-c8da-4f3d-8b3f-5f90eb4111ca&lang=ru_RU" type="text/javascript"></script>
 <script src="js/jquery-3.6.0.min.js" defer></script>
 <script src="js/jquery-ui.min.js" defer></script>
+<script src="js/jquery.flexslider-min.js" defer></script>
 <script src="js/js.js" defer></script>
 
 </body>

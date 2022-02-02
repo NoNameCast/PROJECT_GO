@@ -22,6 +22,43 @@ ul {
     align-items: center;
 }
 
+.navigation__menu-button {
+    content: "";
+    background: url(../img/modal_menu.svg) no-repeat;
+    width: 54px;
+    height: 54px;
+    display: none;
+}
+
+.navigation__modal {
+    display: none;
+    width: 688px;
+    height: 383px;
+    background: #1B1A1B;
+}
+
+.navigation__modal-list {
+    list-style: none;
+}
+
+.navigation__modal-item {
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 22px;
+    text-align: center;
+    padding-top: 19px;
+    padding-bottom: 16px;
+}
+
+.navigation__modal-item:hover {
+    background-color: var(--text-purple);
+}
+
+.navigation__modal-item:active {
+    background: #CD06FF;
+}
+
 .navigation__list {
     list-style: none;
     display: inline-flex;
@@ -246,7 +283,7 @@ section {
 .friends__list{
     display: flex;
     align-items: center;
-    flex-wrap:nowrap;
+    flex-wrap:wrap;
     gap: 20px;
     list-style: none;
     margin-bottom: 40px;
@@ -262,37 +299,37 @@ section {
 
 .friends__item-audio{
     background: url(../img/audio.jpg);
-    width: 380px;
+    width: 340px;
     height: 228px;
 }
 
 .friends__item-games{
     background: url(../img/game.jpg);
-    width: 380px;
+    width: 340px;
     height: 228px;
 }
 
 .friends__item-playstation{
     background: url(../img/sony.jpg);
-    width: 380px;
+    width: 340px;
     height: 228px;
 }
 
 .friends__item-service{
     background: url(../img/netflix.jpg);
-    width: 380px;
+    width: 340px;
     height: 228px;
 }
 
 .friends__item-sing{
     background: url(../img/micro.jpg);
-    width: 380px;
+    width: 340px;
     height: 228px;
 }
 
 .friends__item-vr{
     background: url(../img/vr.jpg); 
-    width: 380px;
+    width: 340px;
     height: 228px;  
 }
 
@@ -422,7 +459,6 @@ section {
 
 .reserve__list-top {
     display: flex;
-    justify-content: space-evenly;
     margin-bottom: 60px;
     gap: 60px;
 }
@@ -616,7 +652,7 @@ section {
     font-weight: 900;
     font-size: 44px;
     line-height: 50px;
-    margin-right: -10px; 
+    margin-right: -5px; 
 }
 
 .about__author::after {
@@ -625,7 +661,7 @@ section {
     font-weight: 900;
     font-size: 44px;
     line-height: 50px;
-    margin-left: -10px; 
+    margin-left: -5px; 
 }
 
 .about__creator {
@@ -693,20 +729,72 @@ section {
     background: url(../img/Maks_otzov.png) no-repeat;
     width: 280px;
     height: 280px;
+    padding-bottom: 50px;
 }
 
 .otzov__img-2 {
     background: url(../img/Oksana_otzov.png) no-repeat;
     width: 280px;
     height: 280px;
-    margin-top: 80px;
 }
 
 .otzov__img-3 {
     background: url(../img/Nikita_otzov.png) no-repeat;
     width: 280px;
     height: 280px;
-    margin-top: 80px;
+}
+
+.flex-direction-nav li {
+    position: absolute;
+    height: 100%;
+    width: 40px;
+    top: 0;
+    list-style: none;
+}
+
+.flex-direction-nav li:first-child {
+    left: 0;
+}
+
+.flex-direction-nav li:last-child {
+    right: 0;
+}
+
+.flex-direction-nav li a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    text-indent: 100%;
+    white-space: nowrap;
+    transition: background-color 0.2s;
+    background-color: lime;
+}
+
+.flex-direction-nav li a::before, .flex-direction-nav li a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 2px;
+    height: 50px;
+    background-color: var(--text-purple)
+}
+
+.flex-direction-nav li a::before {
+    transform: translateY(8px) rotate(-45deg);
+}
+
+.flex-direction-nav li a::after {
+    transform: translateY(-27px) rotate(45deg);
+}
+
+.flex-direction-nav li:last-child a::before {
+    transform: translateY(-35px) rotate(-45deg);
+}
+
+.flex-direction-nav li:last-child a::after {
+    transform: translateY(0px) rotate(45deg);
 }
 
 
@@ -781,13 +869,13 @@ section {
 
 .faq__item:nth-child(even)
 .faq__active:hover:after {
-    background-image: url(/img/open_hover_purple.svg);
+    background-image: url(/img/open_hover_white.svg);
     transition-duration: 0.3s;
    }
 
 .faq__item:nth-child(odd)
 .faq__active:hover:after {
-    background-image: url(/img/open_hover_white.svg);
+    background-image: url(/img/open_hover_purple.svg);
     transition-duration: 0.3s;
 }
 
@@ -799,9 +887,14 @@ section {
     outline: none;
 }
 
-.faq__item:active {
-    outline: 2px solid black;
-    border-radius: 5px;
+.faq__item:nth-child(even)
+.ui-state-active:after {
+    background-image: url(../img/open-accordeon.svg) !important;
+}
+
+.faq__item:nth-child(odd)
+.ui-state-active:after {
+    background-image: url(../img/open__accordeon-purple.svg) !important;
 }
 
 .faq__accordions-content {
@@ -954,7 +1047,614 @@ section {
 
 /*Footer END*/
 
+/*Adaptive 1024*/
 
+@media screen and (max-width: 1024px) {
+    .nav__logo {
+        width: 87px;
+        height: 55px;
+    }
+
+    .navigation__link {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .search__button {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .main__container {
+        height: 580px;
+    }
+
+    .main__title {
+        font-weight: 900;
+        font-size: 152px;
+        text-align: center;
+        letter-spacing: -0.1em;
+    }
+
+    .main__subtitle {
+        font-size: 22px;
+        line-height: 30px;
+        margin: 0;
+        margin-bottom: 40px;
+    }
+
+    .main__text-purple_number {
+        font-size: 85px;
+        font-weight: bold;
+    }
+
+    .main__text-purple_text {
+        font-size: 55px;
+        padding-bottom: 15px;
+        padding-left: 15px;
+    }
+
+    .main__text {
+        font-size: 23px;
+    }
+
+    .main__container {
+        padding-left: 30px;
+    }
+    
+    .main__button {
+        width: 296px;
+        height: 64px;
+        padding: 17px 48px;
+        font-size: 22px;
+        line-height: 30px;
+        bottom: 55px;
+        left: 70px;
+    }
+
+    .main__button-down {
+        background: url(../img/down-button_1024.svg) no-repeat;
+        bottom: 10px;
+        left: 47%;
+    }
+
+    .main__container {
+        margin-bottom: 50px;
+    }
+    
+    .main__container::after {
+        background: url(../img/man_1024.png) no-repeat;
+        top: 60px;
+        left: 480px;
+    }
+
+    .main__container:before {
+        top: 150px;
+        left: 65px;
+        background: url(../img/game-over-banner_1024.svg);
+        height: 100%;
+        width: 100%;
+    }
+
+    .friends__title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .friends__list {
+        margin-bottom: 0px;
+    }
+
+    .friends__item-audio{
+        background: url(../img/audio_1024.jpg) no-repeat;
+        width: 380px;
+        height: 228px;
+    }
+    
+    .friends__item-games{
+        background: url(../img/game_1024.jpg) no-repeat;
+        width: 380px;
+        height: 228px;
+    }
+    
+    .friends__item-playstation{
+        background: url(../img/sony_1024.jpg) no-repeat;
+        width: 380px;
+        height: 228px;
+    }
+    
+    .friends__item-service{
+        background: url(../img/netflix_1024.jpg) no-repeat;
+        width: 380px;
+        height: 228px;
+    }
+    
+    .friends__item-sing{
+        background: url(../img/micro_1024.jpg) no-repeat;
+        width: 380px;
+        height: 228px;
+    }
+    
+    .friends__item-vr{
+        background: url(../img/vr_1024.jpg) no-repeat; 
+        width: 380px;
+        height: 228px;  
+    }
+
+    .room__list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .room__text {
+        font-size: 50px;
+        line-height: 60px;
+        left: 95px;
+    }
+
+    .room__item {
+        width: 462px;
+        height: 267px;
+    }
+
+    .room__item-1 {
+        background: url(../img/vibe-80s_1024.jpg)no-repeat;
+    }
+    
+    .room__item-2 {
+        background: url(../img/star-wars_1024.jpg)no-repeat;
+    }
+    
+    
+    .room__item-3 {
+        background: url(../img/wild-west_1024.jpg)no-repeat;
+    }
+    
+    
+    .room__item-4 {
+        background: url(../img/neon_1024.jpg)no-repeat;
+    }
+
+    .container__reserve {
+        padding: 60px 60px;
+    }
+
+    .reserve__fieldset-label {
+        width: 140px;
+        padding: 10px 20px;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .reserve__list-top {
+        gap: 60px;
+    }
+
+    .reserve__item-bottom {
+        width: 243px;
+    }
+
+    #people {
+        width: 292px;
+    }
+
+    .reserve__button-bottom {
+        width: 254px;
+        padding: 13px 45px;
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .reserve__div {
+        width: 310px;
+        gap: 32px;
+    }
+
+    .reserve__fieldset-bottom {
+        width: 995px;
+    }
+
+    .reserve__div-second {
+        width: 261px;
+    }
+
+    .about__title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .about__img {
+        background: url(../img/about-photos_1024.png) no-repeat;
+        height: max-content;
+    }
+
+    .about__text {
+        font-size: 18px;
+        line-height: 24px;
+        padding-left: 480px;
+    }
+
+    .about__author {
+        font-size: 30px;
+        line-height: 36px;
+    }
+    
+    .about__creator-img {
+        background: url(../img/author_man_1024.png) no-repeat;
+    }
+
+    .about__creator-text {
+        font-size: 18px;
+        line-height: 26px;
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navigation__list {
+        display: none;
+    }
+
+    .navigation__menu-button {
+        display: block;
+        margin-top: 15px;
+    }
+
+    .main__container {
+        height: 500px;
+    }
+
+    .main__title {
+        font-size: 116px;
+        line-height: 100%;
+    }
+
+    .main__subtitle {
+        font-size: 18px;
+        line-height: 24px;
+        padding-left: 104px;
+    }
+
+    .main__button-down {
+        display: none;
+    }
+    
+    .main__container::after {
+        background: url(../img/man_768.png) no-repeat;
+        top: 60px;
+        left: 290px;
+    }
+
+    .main__container:before {
+        background: url(../img/game-over-banner_768.svg);
+        height: 100%;
+        width: 100%;
+        top: 110px;
+        left: 38px;
+    }
+
+    .main__text-purple_number {
+        font-size: 55px;
+        font-weight: bold;
+        width: 150px;
+    }
+
+    .main__text-purple_text {
+        font-size: 35px;
+        padding-left: 30px;
+    }
+
+    .main__text {
+        font-size: 17px;
+        width: 150px;
+    }
+
+    .main__button {
+        width: 214px;
+        height: 46px;
+        font-size: 16px;
+        line-height: 24px;
+        padding: 11px 35px;
+        bottom: 80px;
+    }
+
+    .friends__title {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .friends__list {
+        max-width: 768px;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+
+    .friends__item-audio{
+        background: url(../img/audio_768.jpg) no-repeat;
+        width: 313px;
+        height: 200px;
+    }
+
+    .friends__item-games{
+        background: url(../img/game_768.jpg) no-repeat;
+        width: 313px;
+        height: 200px;
+    }
+    
+    .friends__item-playstation{
+        background: url(../img/sony_768.jpg) no-repeat;
+        width: 313px;
+        height: 200px;
+
+    }
+    
+    .friends__item-service{
+        background: url(../img/netflix_768.jpg) no-repeat;
+         width: 313px;
+        height: 200px;
+
+    }
+    
+    .friends__item-sing{
+        background: url(../img/micro_768.jpg) no-repeat;
+        width: 313px;
+        height: 200px;
+
+    }
+    
+    .friends__item-vr{
+        background: url(../img/vr_768.jpg) no-repeat; 
+        width: 313px;
+        height: 200px;
+ 
+    }
+
+    .room__title {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .room__list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 17px 20px;
+    }
+
+    .room__text {
+        width: 120px;
+        font-size: 40px;
+        line-height: 50px;
+        left: 95px;
+    }
+
+    .room__item {
+        width: 313px;
+        height: 200px;
+    }
+
+    .room__item-1 {
+        background: url(../img/vibe-80s_768.jpg)no-repeat;
+    }
+    
+    .room__item-2 {
+        background: url(../img/star-wars_768.jpg)no-repeat;
+    }
+    
+    
+    .room__item-3 {
+        background: url(../img/wild-west_768.jpg)no-repeat;
+    }
+    
+    
+    .room__item-4 {
+        background: url(../img/neon_768.jpg)no-repeat;
+    }
+
+    .container__reserve {
+        padding: 50px 40px;
+    }
+
+    .reserve__title {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .reserve__undertitle {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .reserve__fieldset-label {
+        width: 110px;
+        padding: 9px 20px;
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    .reserve__list-top {
+        gap: 29px;
+    }
+
+    .reserve__undertitle-middle {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    .reserve__item-middle {
+        font-size: 24px;
+        line-height: 28px;
+    }
+    
+    .reserve__item-middle input[type='radio'] {
+        margin-right: 10px;
+        transform: scale(2.2);
+    }
+
+    .reserve__lable-item {
+        font-size: 22px;
+        line-height: 25px;
+    }
+
+    .reserve__item-middle input[type='checkbox'] {
+        margin-right: 15px;
+        transform: scale(2.2);
+    }
+
+    .reserve__fieldset-bottom {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .reserve__div {
+        flex-wrap: nowrap;
+    }
+
+    .reserve__div-first {
+        flex-wrap: nowrap;
+    }
+
+    .reserve__div-second {
+        flex-direction: column;
+    }
+
+    .reserve__div-third {
+        flex-direction: column;
+    }
+
+    .about__title {
+        font-size: 40px;
+        line-height: 50px;
+    }
+
+    .about__img {
+        background: url(../img/about-photos_768.png) no-repeat;
+    }
+
+    .about__text {
+        width: 278px;
+        padding-top: 90px;
+        padding-left: 420px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .about__author {
+        padding-left: 0px;
+        padding-top: 40px;
+        font-size: 32px;
+        line-height: 36px;
+        width: 666px;
+    }
+
+    .about__creator {
+        padding-top: 0px;
+        padding-left: 315px;
+    }
+
+    .about__creator-img {
+        background: url(../img/author_man_768.png) no-repeat;
+    }
+
+    .otzov__title {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .otzov__img-1 {
+        background: url(../img/maks_otzov_768.png) no-repeat;
+        width: 153px;
+        height: 153px;
+        padding-left: 10px;
+    }
+
+    .otzov__img-2 {
+        background: url(../img/maks_otzov_768.png) no-repeat;
+        width: 153px;
+        height: 153px;
+    }
+
+    .otzov__img-3 {
+        background: url(../img/maks_otzov_768.png) no-repeat;
+        width: 153px;
+        height: 153px;
+    }
+
+    .otzov__text{
+        width: 393px;
+        padding-top: 25px;
+        margin-left: 180px;
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .otzov__name {
+        margin: 0;
+        padding-top: 0;
+        padding-left: 25px;
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .faq__title {
+        font-size: 24px;
+        line-height: 26px;
+    }
+
+    .faq__active {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .faq__accordions-content {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    .contact__title {
+        font-size: 24px;
+        line-height: 36px;
+    }
+
+    .contact__item {
+        font-size: 24px;
+        line-height: 28px;
+        margin-bottom: 27px !important;
+    }
+
+    .contact__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 75px;
+    }
+
+    .contact__items {
+        width: 380px;
+    }
+
+    .contact__location {
+        margin-left: 40px;
+    }
+
+    .contact__phone {
+        margin-left: 20px;
+    }
+    
+    .social__column {
+        margin-bottom: 30px;
+        padding-left: 50px;
+    }
+        
+
+
+
+
+
+
+
+
+
+}
 
 
 
