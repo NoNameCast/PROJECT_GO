@@ -1771,6 +1771,7 @@ section {
         width: 290px;
         padding-left: 0px;
         gap: 10px;
+        margin-bottom: 60px;
     }
 
     .friends__item-audio{
