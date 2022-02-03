@@ -1722,7 +1722,170 @@ section {
         font-size: 20px;
         font-weight: bold;
         right: 40px;
+        top: 76px;
     }
+
+    .main__text {
+        font-size: 10px;
+    }
+
+    .main__text-block {
+        height: 100px;
+        width: 150px;
+    }
+
+    .main__button {
+        width: 117px;
+        height: 25px;
+        font-size: 10px;
+        line-height: 12px;
+        padding: 8px 13px;
+        position: absolute;
+        left: 0px;
+        top: 150px;
+    }
+    
+    .main__text-left {
+        position: absolute;
+        font-size: 8px;
+        top: 102px;
+        right: 229px;
+        width: 51px;
+    }
+
+    .main__text-right {
+        position: absolute;
+        font-size: 8px;
+        top: 102px;
+        right: 159px;
+        width: 51px;
+    }
+
+    .friends__title {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 15px;
+    }
+
+    .friends__list {
+        width: 290px;
+        padding-left: 0px;
+        gap: 10px;
+    }
+
+    .friends__item-audio{
+        background: url(../img/audio_320.jpg) no-repeat;
+        width: 134px;
+        height: 75px;
+    }
+
+    .friends__item-games{
+        background: url(../img/game_320.jpg) no-repeat;
+        width: 134px;
+        height: 75px;
+    }
+    
+    .friends__item-playstation{
+        background: url(../img/sony_320.jpg) no-repeat;
+        width: 134px;
+        height: 75px;
+
+    }
+    
+    .friends__item-service{
+        background: url(../img/netflix_320.jpg) no-repeat;
+        width: 134px;
+        height: 75px;
+
+    }
+    
+    .friends__item-sing{
+        background: url(../img/micro_320.jpg) no-repeat;
+        width: 134px;
+        height: 75px;
+
+    }
+    
+    .friends__item-vr{
+        background: url(../img/vr_320.jpg) no-repeat; 
+        width: 134px;
+        height: 75px;
+ 
+    }
+ 150px;
+    }
+    
+    .main__text-left {
+        position: absolute;
+        font-size: 8px;
+        top: 102px;
+        right: 229px;
+        width: 51px;
+    }
+
+    .main__text-right {
+        position: absolute;
+        font-size: 8px;
+        top: 102px;
+        right: 159px;
+        width: 51px;
+    }
+
+    .friends__title {
+        font-size: 14px;
+        line-height: 18px;
+        margin-bottom: 15px;
+    }
+
+    .friends__list {
+        width: 290px;
+        padding-left: 0px;
+        gap: 10px;
+    }
+
+    .friends__item-audio{
+        background: url(../img/audio_320.jpg) no-repeat;
+        width: 134px;
+        height: 75px;
+    }
+
+    .friends__item-games{
+        background: url(../img/game_320.jpg) no-repeat;
+        width: 134px;
+        height: 75px;
+    }
+    
+    .friends__item-playstation{
+        background: url(../img/sony_320.jpg) no-repeat;
+        width: 134px;
+        height: 75px;
+
+    }
+    
+    .friends__item-service{
+        background: url(../img/netflix_320.jpg) no-repeat;
+        width: 134px;
+        height: 75px;
+
+    }
+    
+    .friends__item-sing{
+        background: url(../img/micro_320.jpg) no-repeat;
+        width: 134px;
+        height: 75px;
+
+    }
+    
+    .friends__item-vr{
+        background: url(../img/vr_320.jpg) no-repeat; 
+        width: 134px;
+        height: 75px;
+ 
+    }
+ 150px;
+    }
+    
+    .main    }
 
     .main__text {
         font-size: 10px;
@@ -1743,19 +1906,5 @@ section {
         left: 0px;
         top: 150px;
     }
-
-
-
-}
-
-
-
-
-
-
-
-
-
-
 
 
